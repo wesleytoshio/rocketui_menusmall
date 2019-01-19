@@ -1,0 +1,96 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+$color_1:#264EFB;
+$color_2:#0197F6;
+$color_3:#2144DD;
+$color_4:#F9FAFF;
+$im:!important;
+ion-menu{
+  ion-content{
+    background-color: $color_1 $im;
+    .menu-icons{
+      display: grid;
+      grid-template-rows: repeat(7, 80px);
+      height: calc(100vh - 80px);
+      button{
+        height: 100%;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        font-size: 1.3em;
+        color: rgba(#fff,0.9)$im;
+        ion-icon{
+          transition: 200ms all;
+        }
+        &:active{
+          ion-icon{
+            transform: scale(0.8);
+          }
+        }
+      }
+  }
+  .menu-footer{
+    height: 80px;
+    display: grid;
+    button{
+      height: 100%;
+      background-color: transparent;
+      margin: 0;
+      padding: 0;
+      font-size: 1.3em;
+      color: rgba(#fff,0.9)$im;
+      ion-icon{
+        transition: 200ms all;
+      }
+      &:active{
+        ion-icon{
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+}
+
+.menu-inner{
+  contain: layout $im;
+}
+}
+.submenu{
+  width: 230px;
+  height: 100vh;
+  top: 0;
+  background-color: $color_3;
+  z-index: -1;
+  position: relative;
+  margin-left: 70px;
+  transition:  all 200ms;
+  transform: translate3d(-230px,0,0);
+  padding: 16px;
+  .submenu-title{
+    color: #fff;
+  }
+  .submenu-item{
+    display: block;
+    background-color: transparent;
+    margin:0;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 1.7rem;
+    padding-left: 0$im;
+  }
+}

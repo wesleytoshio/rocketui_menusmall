@@ -1,0 +1,34 @@
+page-home {
+  ion-header{
+    .toolbar-background{
+      //background-color: #fff $im;
+    }
+    .toolbar-title{
+      padding-left: 0$im;
+    }
+  }
+  ion-content{
+    background-color: $color_4 !important;
+    .rocketui-special-thanks{
+      display: grid;
+      height: 100%;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      padding: 16px;
+      color: #555;
+      h2{
+        font-size: 2em;
+        font-weight: 300;
+      }
+      p{
+        font-size: 1.6rem;
+      }
+      a{
+        display: block;
+        font-size: 1.8rem;
+        text-decoration: none;
+      }
+    }
+  }
+}

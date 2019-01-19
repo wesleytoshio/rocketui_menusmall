@@ -1,0 +1,26 @@
+<ion-menu [content]="content" (ionClose)="resetMenuState()">
+  <ion-content>
+    <div class="menu-icons">
+      <button ion-button icon-only clear *ngFor="let item of icons" (click)="openSubmenu(item)" >
+        <ion-icon [name]="item?.icon"></ion-icon>
+      </button>
+    </div>
+    <div class="menu-footer">
+      <button ion-button icon-only clear>
+        <ion-icon name="md-power"></ion-icon>
+      </button>
+    </div>
+  </ion-content>
+  <div class="submenu" #submenu>
+    <h2 class="submenu-title">{{subMenuData?.submenuTitle}}</h2>
+    <button class="submenu-item"
+      *ngFor="let sub of subMenuData?.subitems"
+      menuToggle (click)="openPage(sub)">
+      {{sub?.title}}
+    </button>
+
+  </div>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
